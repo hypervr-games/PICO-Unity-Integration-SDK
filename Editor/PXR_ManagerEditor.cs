@@ -272,20 +272,20 @@ namespace Unity.XR.PXR.Editor
             }
 
 #if UNITY_2021_3_OR_NEWER
-            XROrigin xrOrigin = FindAnyObjectByType<XROrigin>();
+            //XROrigin xrOrigin = FindAnyObjectByType<XROrigin>();
 #else
-            XROrigin xrOrigin = FindObjectOfType<XROrigin>();
+            //XROrigin xrOrigin = FindObjectOfType<XROrigin>();
 #endif
-            if (xrOrigin.RequestedTrackingOriginMode != XROrigin.TrackingOriginMode.Floor)
-            {
-                GUI.enabled = false;
-                projectConfig.stageMode = EditorGUILayout.Toggle("Stage Mode", false);
-                GUI.enabled = true;
-            }
-            else
-            {
-                projectConfig.stageMode = EditorGUILayout.Toggle("Stage Mode", projectConfig.stageMode);
-            }
+            //if (xrOrigin.RequestedTrackingOriginMode != XROrigin.TrackingOriginMode.Floor)
+            //{
+            //    GUI.enabled = false;
+            //    projectConfig.stageMode = EditorGUILayout.Toggle("Stage Mode", false);
+            //    GUI.enabled = true;
+            //}
+            //else
+            //{
+            //    projectConfig.stageMode = EditorGUILayout.Toggle("Stage Mode", projectConfig.stageMode);
+            //}
 
             //mr
             EditorGUILayout.BeginVertical("frameBox");
